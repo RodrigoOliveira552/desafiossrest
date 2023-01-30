@@ -4,7 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Table(name="TB_TRABALHADOR")
+@Table(name="TB_TRABALHADOR")\
 public class Trabalhador {
 
     @Id
@@ -12,7 +12,7 @@ public class Trabalhador {
     private long id;
 
     @Column(unique = true)
-    private String rg;
+    private String cpf;
 
     @NotEmpty
     private String nomeTrabalhador;
@@ -23,12 +23,12 @@ public class Trabalhador {
     @OneToOne
     private Cargo cargo;
 
-    public String getRg() {
-        return rg;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setRg(String rg) {
-        this.rg = rg;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getNomeTrabalhador() {
